@@ -12,7 +12,7 @@ const store = createStore({
   },
   mutations: {
     addNewTask (state, newTitle) {
-      state.tasks.push({ id: state.tasks.length + 1, title: newTitle })
+      state.tasks.push({ id: state.tasks.length + 1, title: newTitle, done: false })
     },
     markAsDone (state, id) {
       const index = state.tasks.findIndex((task) => task.id === id)
